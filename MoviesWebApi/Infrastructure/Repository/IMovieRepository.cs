@@ -29,7 +29,7 @@ namespace Domain.Interfaces
         /// <returns> IEnumerable<Movie> con las peliculas correspondientes. </returns>
         IEnumerable<Movie>? GetMovieByTitle(string title);
 
-        IEnumerable<MovieActors>? GetMovieActors(int MovieID);
+        IEnumerable<MovieActors>? GetMovieActors(int id);
 
         /// <summary>
         /// Inserta una pelicula en la base de datos uando los datos recibidos.

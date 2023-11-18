@@ -43,16 +43,16 @@ namespace Presentation.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns> Movie </returns>
-        [HttpGet("get/{movieid}")]
-        public IActionResult GetMovieByID(int MovieID) 
+        [HttpGet("get/{id}")]
+        public IActionResult GetMovieByID(int id) 
         {
-            if (MovieID > 0)
+            if (id > 0)
             {
-                var movieByID = _movieRepository.GetMovieByID(MovieID);
+                var movieByID = _movieRepository.GetMovieByID(id);
 
                 if (movieByID == null)
                 {
-                    return NotFound($"No found movie with ID: {MovieID}.");
+                    return NotFound($"No found movie with ID: {id}.");
                 }
 
                 return Json(movieByID);
@@ -89,10 +89,10 @@ namespace Presentation.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns> IEnumerable<MovieActors> </returns>
-        [HttpGet("get/actors/{movieid}")]
-        public IActionResult GetMovieActors(int MovieID)
+        [HttpGet("get/actors/{id}")]
+        public IActionResult GetMovieActors(int id)
         {
-            var MovieActors = _movieService.GetActorsByMovie(MovieID);
+            var MovieActors = _movieService.GetActorsByMovie(id);
             if (MovieActors == null)
             {
                 return NoContent();

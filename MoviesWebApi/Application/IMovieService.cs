@@ -10,6 +10,6 @@ namespace Application
     public interface IMovieService
     {
         public void AddActorToMovie(int MovieID, int ActorID);
-        public IEnumerable<MovieActors>? GetActorsByMovie(int MovieId);
+        public IEnumerable<MovieActors>? GetActorsByMovie(int id);
     }
 }

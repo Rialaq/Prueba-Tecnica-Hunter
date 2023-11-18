@@ -37,9 +37,9 @@ namespace Application
             }
         }
 
-        public IEnumerable<MovieActors>? GetActorsByMovie(int MovieID)
+        public IEnumerable<MovieActors>? GetActorsByMovie(int id)
         {
-            return _movieRepository.GetMovieActors(MovieID);
+            return _movieRepository.GetMovieActors(id);
         }
     }
 
